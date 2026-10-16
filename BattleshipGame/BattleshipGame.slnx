@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="BattleshipGame/BattleshipGame.csproj" />
+  <Project Path="Battleship.Console/Battleship.Console.csproj" Id="f1438ebf-8fca-4107-8ea9-3080795e9a47" />
+  <Project Path="Battleship.Core/Battleship.Core.csproj" Id="4a9966a0-ec58-4289-a16f-359e39139c52" />
 </Solution>
