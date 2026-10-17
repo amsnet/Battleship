@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Battleship.Core.Game
+﻿namespace Battleship.Core.Game
 {
-    internal class Player
+    public class Player(string name, Board board)
     {
+        public string Name { get; } = name;
+        public Board Board { get; } = board;
     }
 }
