@@ -3,21 +3,21 @@ namespace Battleship.Core.Game
 {
     public class Tile
     {
-        public TileState State { get; private set; }
+        public TileState State { get; private set; } = TileState.Water;
 
         public void MarkShip()
         {
-            //TODO
+            State = TileState.Ship;
         }
 
         public void MarkHit()
         {
-            //TODO
+            State = TileState.Hit;
         }
 
         public void MarkMiss()
         {
-            //TODO
+            State = TileState.Miss;
         }
     }
 }

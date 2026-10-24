@@ -4,6 +4,6 @@ namespace Battleship.Core.Bots
 {
     public interface IBot
     {
-        public Coordinate ChooseAttack(List<Coordinate> previousAttacks);
+        public Coordinate ChooseAttack(List<Coordinate> previousAttacks, int size);
     }
 }

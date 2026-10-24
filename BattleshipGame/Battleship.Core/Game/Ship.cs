@@ -16,14 +16,14 @@ namespace Battleship.Core.Game
             //TODO
         }
 
-        public bool Occupies(Coordinate coordinate)
-        {
-            //TODO
-        }
+        //public bool Occupies(Coordinate coordinate)
+        //{
+        //    //TODO
+        //}
 
-        public bool RegisterHit()
-        {
-            //TODO
-        }
+        //public bool RegisterHit()
+        //{
+        //    //TODO
+        //}
     }
 }

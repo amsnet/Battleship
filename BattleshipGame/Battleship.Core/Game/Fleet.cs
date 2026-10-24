@@ -13,9 +13,9 @@ namespace Battleship.Core.Game
             //TODO
         }
 
-        public Ship FindShip(Coordinate coord)
-        {
-            //TODO
-        }
+        //public Ship FindShip(Coordinate coord)
+        //{
+        //    //TODO
+        //}
     }
 }

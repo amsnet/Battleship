@@ -16,18 +16,37 @@ namespace Battleship.Core.Game
 
         public void StartGame()
         {
-            //TODO
+            _humanPlayer = new Player("You", new Board());
+            _botPlayer = new Player("Opponent", new Board());
+
+            _fleetPlacer.PlaceFleet(_humanPlayer.Board);
+            _fleetPlacer.PlaceFleet(_botPlayer.Board);
+
+
+
         }
 
         public AttackResult Attack(Coordinate coordinate)
         {
-            //TODO
+            if (_botPlayer.Board.IsWithinBounds(coordinate))
+            {
+                return _botPlayer.Board.Attack(coordinate);
+            }
+
+            return AttackResult.Invalid;
         }
 
         public AttackResult ExecuteBotTurn()
         {
-            //TODO
-        }
+            Coordinate attackCoordinate;
 
+            do
+            {
+                attackCoordinate = _bot.ChooseAttack(_humanPlayer.Board.GetAttackedCoordinates(), _humanPlayer.Board.Size);
+            } while (_humanPlayer.Board.Attack(attackCoordinate) == AttackResult.Invalid);
+
+            return _humanPlayer.Board.Attack(attackCoordinate);
+
+        }
     }
 }

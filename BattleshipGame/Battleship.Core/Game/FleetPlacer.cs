@@ -7,15 +7,18 @@ namespace Battleship.Core.Game
     {
         public void PlaceFleet(Board board)
         {
-
+            foreach (Ship ship in board.Fleet.Ships)
+            {
+                while (!board.TryPlaceShip(ship, GenerateRandomCoordinate(board.Size), GenerateRandomOrientation())) ;
+            }
         }
 
-        public Coordinate GenerateRandomCoordinate()
+        private Coordinate GenerateRandomCoordinate(int size)
         {
-            return new Coordinate(Random.Shared.Next(10), Random.Shared.Next(10));
+            return new Coordinate(Random.Shared.Next(size), Random.Shared.Next(size));
         }
 
-        public Orientation GenerateRandomOrientation()
+        private Orientation GenerateRandomOrientation()
         {
             return Random.Shared.Next(2) == 0 ? Orientation.Horizontal : Orientation.Vertical;
         }
